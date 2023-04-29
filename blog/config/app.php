@@ -134,14 +134,7 @@ return [
     |
     */
 
-<<<<<<< Updated upstream
-      // config/app.php
-
-        'providers' =>[
-        Laravel\Passport\PassportServiceProvider::class,
-=======
     'providers' => [
->>>>>>> Stashed changes
 
         /*
          * Laravel Framework Service Providers...
