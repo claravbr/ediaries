@@ -3,8 +3,24 @@
   <component name="MessDetectorOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>
+<<<<<<< Updated upstream
+<<<<<<<< Updated upstream:.idea/php.xml
   <component name="PHPCSFixerOptionsConfiguration">
     <option name="transferred" value="true" />
+========
+  <component name="ChangeListManager">
+    <list default="true" id="3708beaf-184a-400c-a47b-dbc84f8f5c22" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+>>>>>>>> Stashed changes:.idea/workspace.xml
+=======
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
+>>>>>>> Stashed changes
   </component>
   <component name="PHPCodeSnifferOptionsConfiguration">
     <option name="highlightLevel" value="WARNING" />
@@ -136,16 +152,119 @@
       <path value="$PROJECT_DIR$/blog/vendor/myclabs/deep-copy" />
     </include_path>
   </component>
+<<<<<<< Updated upstream
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>
+<<<<<<<< Updated upstream:.idea/php.xml
   <component name="PhpUnit">
     <phpunit_settings>
       <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/blog/vendor/autoload.php" />
     </phpunit_settings>
+========
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Clara/OneDrive/Documentos/GitHub/ediaries&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3708beaf-184a-400c-a47b-dbc84f8f5c22" name="Changes" comment="" />
+      <created>1678786988122</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678786988122</updated>
+      <workItem from="1678786990588" duration="1534000" />
+      <workItem from="1682255890823" duration="2147000" />
+      <workItem from="1682519279467" duration="2237000" />
+      <workItem from="1682792543414" duration="3830000" />
+      <workItem from="1682805616307" duration="1730000" />
+    </task>
+    <servers />
+>>>>>>>> Stashed changes:.idea/workspace.xml
   </component>
   <component name="PsalmOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="174b3163-ebf4-48a0-9c3b-060cc7d60688">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="e587d6ac-e85b-4855-8e67-62fe540ac64a">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/Users/Clara/OneDrive/Documentos/GitHub/ediaries/blog/database/migrations" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="174b3163-ebf4-48a0-9c3b-060cc7d60688" value="TOOL_WINDOW" />
+        <entry key="e587d6ac-e85b-4855-8e67-62fe540ac64a" value="TOOL_WINDOW" />
+      </map>
+    </option>
+  </component>
+=======
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+>>>>>>> Stashed changes
 </project>

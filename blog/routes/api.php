@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< Updated upstream
 use App\Http\Controllers\API\PassportAuthController;
 use App\Http\Controllers\API\ProductController;
 
@@ -27,6 +28,8 @@ Route::middleware('auth:api')->group(function () {
 
 });
 
+=======
+>>>>>>> Stashed changes
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });

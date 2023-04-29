@@ -40,10 +40,13 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+<<<<<<< Updated upstream
         'api' => [
             'driver' => 'passport',
             'provider' => 'users',
         ],
+=======
+>>>>>>> Stashed changes
     ],
 
     /*
@@ -66,7 +69,11 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
+<<<<<<< Updated upstream
             'model' => App\Models\Usuario::class,
+=======
+            'model' => App\Models\User::class,
+>>>>>>> Stashed changes
         ],
 
         // 'users' => [
