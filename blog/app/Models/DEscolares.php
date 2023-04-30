@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class DEscolares extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nivelAcademico',
+        'centroEducativo',
+        'repetidor'
+    ];
 }

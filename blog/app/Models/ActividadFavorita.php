@@ -8,9 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class ActividadFavorita extends Model
 {
     use HasFactory;
-
-    protected $table = 'actividades_favoritas';
-
     protected $fillable = [
         'nombre'
     ];
