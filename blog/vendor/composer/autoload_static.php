@@ -24,6 +24,7 @@ class ComposerStaticInita08453948c04f4a29b0625cb82546184
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        'c2aad8997a98dfc4771bdbffea3d62b7' => __DIR__ . '/..' . '/laminas/laminas-code/polyfill/ReflectionEnumPolyfill.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
@@ -42,6 +43,10 @@ class ComposerStaticInita08453948c04f4a29b0625cb82546184
         'v' => 
         array (
             'voku\\' => 5,
+        ),
+        'h' => 
+        array (
+            'hanneskod\\classtools\\' => 21,
         ),
         'W' => 
         array (
@@ -121,6 +126,7 @@ class ComposerStaticInita08453948c04f4a29b0625cb82546184
             'Laravel\\SerializableClosure\\' => 28,
             'Laravel\\Sanctum\\' => 16,
             'Laravel\\Sail\\' => 13,
+            'Laminas\\Code\\' => 13,
         ),
         'I' => 
         array (
@@ -165,6 +171,7 @@ class ComposerStaticInita08453948c04f4a29b0625cb82546184
         'B' => 
         array (
             'Brick\\Math\\' => 11,
+            'BenSampo\\Enum\\' => 14,
         ),
         'A' => 
         array (
@@ -177,6 +184,10 @@ class ComposerStaticInita08453948c04f4a29b0625cb82546184
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
+        ),
+        'hanneskod\\classtools\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hanneskod/classtools/src',
         ),
         'Whoops\\' => 
         array (
@@ -320,8 +331,8 @@ class ComposerStaticInita08453948c04f4a29b0625cb82546184
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -386,6 +397,10 @@ class ComposerStaticInita08453948c04f4a29b0625cb82546184
         'Laravel\\Sail\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/sail/src',
+        ),
+        'Laminas\\Code\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laminas/laminas-code/src',
         ),
         'Illuminate\\Support\\' => 
         array (
@@ -480,6 +495,10 @@ class ComposerStaticInita08453948c04f4a29b0625cb82546184
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
         ),
+        'BenSampo\\Enum\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/bensampo/laravel-enum/src',
+        ),
         'Asm89\\Stack\\' => 
         array (
             0 => __DIR__ . '/..' . '/asm89/stack-cors/src',
@@ -513,7 +532,16 @@ class ComposerStaticInita08453948c04f4a29b0625cb82546184
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-        'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Models\\ActividadFavorita' => __DIR__ . '/../..' . '/app/Models/ActividadFavorita.php',
+        'App\\Models\\Categoria' => __DIR__ . '/../..' . '/app/Models/Categoria.php',
+        'App\\Models\\Child' => __DIR__ . '/../..' . '/app/Models/Child.php',
+        'App\\Models\\ChildActividadFavorita' => __DIR__ . '/../..' . '/app/Models/ChildActividadFavorita.php',
+        'App\\Models\\DClinicos' => __DIR__ . '/../..' . '/app/Models/DClinicos.php',
+        'App\\Models\\DEscolares' => __DIR__ . '/../..' . '/app/Models/DEscolares.php',
+        'App\\Models\\DPersonales' => __DIR__ . '/../..' . '/app/Models/DPersonales.php',
+        'App\\Models\\DiarioEmociones' => __DIR__ . '/../..' . '/app/Models/DiarioEmociones.php',
+        'App\\Models\\TareaDiaria' => __DIR__ . '/../..' . '/app/Models/TareaDiaria.php',
+        'App\\Models\\Usuario' => __DIR__ . '/../..' . '/app/Models/Usuario.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -522,6 +550,25 @@ class ComposerStaticInita08453948c04f4a29b0625cb82546184
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'BenSampo\\Enum\\Casts\\EnumCast' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/Casts/EnumCast.php',
+        'BenSampo\\Enum\\Commands\\AbstractAnnotationCommand' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/Commands/AbstractAnnotationCommand.php',
+        'BenSampo\\Enum\\Commands\\EnumAnnotateCommand' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/Commands/EnumAnnotateCommand.php',
+        'BenSampo\\Enum\\Commands\\MakeEnumCommand' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/Commands/MakeEnumCommand.php',
+        'BenSampo\\Enum\\Contracts\\EnumContract' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/Contracts/EnumContract.php',
+        'BenSampo\\Enum\\Contracts\\LocalizedEnum' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/Contracts/LocalizedEnum.php',
+        'BenSampo\\Enum\\Enum' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/Enum.php',
+        'BenSampo\\Enum\\EnumServiceProvider' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/EnumServiceProvider.php',
+        'BenSampo\\Enum\\EnumType' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/EnumType.php',
+        'BenSampo\\Enum\\Exceptions\\InvalidEnumKeyException' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/Exceptions/InvalidEnumKeyException.php',
+        'BenSampo\\Enum\\Exceptions\\InvalidEnumMemberException' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/Exceptions/InvalidEnumMemberException.php',
+        'BenSampo\\Enum\\FlaggedEnum' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/FlaggedEnum.php',
+        'BenSampo\\Enum\\PHPStan\\EnumMethodReflection' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/PHPStan/EnumMethodReflection.php',
+        'BenSampo\\Enum\\PHPStan\\EnumMethodsClassReflectionExtension' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/PHPStan/EnumMethodsClassReflectionExtension.php',
+        'BenSampo\\Enum\\Rules\\Enum' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/Rules/Enum.php',
+        'BenSampo\\Enum\\Rules\\EnumKey' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/Rules/EnumKey.php',
+        'BenSampo\\Enum\\Rules\\EnumValue' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/Rules/EnumValue.php',
+        'BenSampo\\Enum\\Traits\\CastsEnums' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/Traits/CastsEnums.php',
+        'BenSampo\\Enum\\Traits\\QueriesFlaggedEnums' => __DIR__ . '/..' . '/bensampo/laravel-enum/src/Traits/QueriesFlaggedEnums.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
         'Brick\\Math\\BigNumber' => __DIR__ . '/..' . '/brick/math/src/BigNumber.php',
@@ -2670,6 +2717,79 @@ class ComposerStaticInita08453948c04f4a29b0625cb82546184
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
+        'Laminas\\Code\\DeclareStatement' => __DIR__ . '/..' . '/laminas/laminas-code/src/DeclareStatement.php',
+        'Laminas\\Code\\Exception\\BadMethodCallException' => __DIR__ . '/..' . '/laminas/laminas-code/src/Exception/BadMethodCallException.php',
+        'Laminas\\Code\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/laminas/laminas-code/src/Exception/ExceptionInterface.php',
+        'Laminas\\Code\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/laminas/laminas-code/src/Exception/InvalidArgumentException.php',
+        'Laminas\\Code\\Exception\\RuntimeException' => __DIR__ . '/..' . '/laminas/laminas-code/src/Exception/RuntimeException.php',
+        'Laminas\\Code\\Generator\\AbstractGenerator' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/AbstractGenerator.php',
+        'Laminas\\Code\\Generator\\AbstractMemberGenerator' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/AbstractMemberGenerator.php',
+        'Laminas\\Code\\Generator\\BodyGenerator' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/BodyGenerator.php',
+        'Laminas\\Code\\Generator\\ClassGenerator' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/ClassGenerator.php',
+        'Laminas\\Code\\Generator\\DocBlockGenerator' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/DocBlockGenerator.php',
+        'Laminas\\Code\\Generator\\DocBlock\\Tag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/DocBlock/Tag.php',
+        'Laminas\\Code\\Generator\\DocBlock\\TagManager' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/DocBlock/TagManager.php',
+        'Laminas\\Code\\Generator\\DocBlock\\Tag\\AbstractTypeableTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/DocBlock/Tag/AbstractTypeableTag.php',
+        'Laminas\\Code\\Generator\\DocBlock\\Tag\\AuthorTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/DocBlock/Tag/AuthorTag.php',
+        'Laminas\\Code\\Generator\\DocBlock\\Tag\\GenericTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/DocBlock/Tag/GenericTag.php',
+        'Laminas\\Code\\Generator\\DocBlock\\Tag\\LicenseTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/DocBlock/Tag/LicenseTag.php',
+        'Laminas\\Code\\Generator\\DocBlock\\Tag\\MethodTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/DocBlock/Tag/MethodTag.php',
+        'Laminas\\Code\\Generator\\DocBlock\\Tag\\ParamTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/DocBlock/Tag/ParamTag.php',
+        'Laminas\\Code\\Generator\\DocBlock\\Tag\\PropertyTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/DocBlock/Tag/PropertyTag.php',
+        'Laminas\\Code\\Generator\\DocBlock\\Tag\\ReturnTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/DocBlock/Tag/ReturnTag.php',
+        'Laminas\\Code\\Generator\\DocBlock\\Tag\\TagInterface' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/DocBlock/Tag/TagInterface.php',
+        'Laminas\\Code\\Generator\\DocBlock\\Tag\\ThrowsTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/DocBlock/Tag/ThrowsTag.php',
+        'Laminas\\Code\\Generator\\DocBlock\\Tag\\VarTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/DocBlock/Tag/VarTag.php',
+        'Laminas\\Code\\Generator\\EnumGenerator\\Cases\\BackedCases' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/EnumGenerator/Cases/BackedCases.php',
+        'Laminas\\Code\\Generator\\EnumGenerator\\Cases\\CaseFactory' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/EnumGenerator/Cases/CaseFactory.php',
+        'Laminas\\Code\\Generator\\EnumGenerator\\Cases\\PureCases' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/EnumGenerator/Cases/PureCases.php',
+        'Laminas\\Code\\Generator\\EnumGenerator\\EnumGenerator' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/EnumGenerator/EnumGenerator.php',
+        'Laminas\\Code\\Generator\\EnumGenerator\\Name' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/EnumGenerator/Name.php',
+        'Laminas\\Code\\Generator\\Exception\\ClassNotFoundException' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/Exception/ClassNotFoundException.php',
+        'Laminas\\Code\\Generator\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/Exception/ExceptionInterface.php',
+        'Laminas\\Code\\Generator\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/Exception/InvalidArgumentException.php',
+        'Laminas\\Code\\Generator\\Exception\\RuntimeException' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/Exception/RuntimeException.php',
+        'Laminas\\Code\\Generator\\FileGenerator' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/FileGenerator.php',
+        'Laminas\\Code\\Generator\\GeneratorInterface' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/GeneratorInterface.php',
+        'Laminas\\Code\\Generator\\InterfaceGenerator' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/InterfaceGenerator.php',
+        'Laminas\\Code\\Generator\\MethodGenerator' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/MethodGenerator.php',
+        'Laminas\\Code\\Generator\\ParameterGenerator' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/ParameterGenerator.php',
+        'Laminas\\Code\\Generator\\PromotedParameterGenerator' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/PromotedParameterGenerator.php',
+        'Laminas\\Code\\Generator\\PropertyGenerator' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/PropertyGenerator.php',
+        'Laminas\\Code\\Generator\\PropertyValueGenerator' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/PropertyValueGenerator.php',
+        'Laminas\\Code\\Generator\\TraitGenerator' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/TraitGenerator.php',
+        'Laminas\\Code\\Generator\\TraitUsageGenerator' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/TraitUsageGenerator.php',
+        'Laminas\\Code\\Generator\\TraitUsageInterface' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/TraitUsageInterface.php',
+        'Laminas\\Code\\Generator\\TypeGenerator' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/TypeGenerator.php',
+        'Laminas\\Code\\Generator\\TypeGenerator\\AtomicType' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/TypeGenerator/AtomicType.php',
+        'Laminas\\Code\\Generator\\ValueGenerator' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generator/ValueGenerator.php',
+        'Laminas\\Code\\Generic\\Prototype\\PrototypeClassFactory' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generic/Prototype/PrototypeClassFactory.php',
+        'Laminas\\Code\\Generic\\Prototype\\PrototypeGenericInterface' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generic/Prototype/PrototypeGenericInterface.php',
+        'Laminas\\Code\\Generic\\Prototype\\PrototypeInterface' => __DIR__ . '/..' . '/laminas/laminas-code/src/Generic/Prototype/PrototypeInterface.php',
+        'Laminas\\Code\\Reflection\\ClassReflection' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/ClassReflection.php',
+        'Laminas\\Code\\Reflection\\DocBlockReflection' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/DocBlockReflection.php',
+        'Laminas\\Code\\Reflection\\DocBlock\\TagManager' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/DocBlock/TagManager.php',
+        'Laminas\\Code\\Reflection\\DocBlock\\Tag\\AuthorTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/DocBlock/Tag/AuthorTag.php',
+        'Laminas\\Code\\Reflection\\DocBlock\\Tag\\GenericTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/DocBlock/Tag/GenericTag.php',
+        'Laminas\\Code\\Reflection\\DocBlock\\Tag\\LicenseTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/DocBlock/Tag/LicenseTag.php',
+        'Laminas\\Code\\Reflection\\DocBlock\\Tag\\MethodTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/DocBlock/Tag/MethodTag.php',
+        'Laminas\\Code\\Reflection\\DocBlock\\Tag\\ParamTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/DocBlock/Tag/ParamTag.php',
+        'Laminas\\Code\\Reflection\\DocBlock\\Tag\\PhpDocTypedTagInterface' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/DocBlock/Tag/PhpDocTypedTagInterface.php',
+        'Laminas\\Code\\Reflection\\DocBlock\\Tag\\PropertyTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/DocBlock/Tag/PropertyTag.php',
+        'Laminas\\Code\\Reflection\\DocBlock\\Tag\\ReturnTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/DocBlock/Tag/ReturnTag.php',
+        'Laminas\\Code\\Reflection\\DocBlock\\Tag\\TagInterface' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/DocBlock/Tag/TagInterface.php',
+        'Laminas\\Code\\Reflection\\DocBlock\\Tag\\ThrowsTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/DocBlock/Tag/ThrowsTag.php',
+        'Laminas\\Code\\Reflection\\DocBlock\\Tag\\VarTag' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/DocBlock/Tag/VarTag.php',
+        'Laminas\\Code\\Reflection\\Exception\\BadMethodCallException' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/Exception/BadMethodCallException.php',
+        'Laminas\\Code\\Reflection\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/Exception/ExceptionInterface.php',
+        'Laminas\\Code\\Reflection\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/Exception/InvalidArgumentException.php',
+        'Laminas\\Code\\Reflection\\Exception\\RuntimeException' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/Exception/RuntimeException.php',
+        'Laminas\\Code\\Reflection\\FunctionReflection' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/FunctionReflection.php',
+        'Laminas\\Code\\Reflection\\MethodReflection' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/MethodReflection.php',
+        'Laminas\\Code\\Reflection\\ParameterReflection' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/ParameterReflection.php',
+        'Laminas\\Code\\Reflection\\PropertyReflection' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/PropertyReflection.php',
+        'Laminas\\Code\\Reflection\\ReflectionInterface' => __DIR__ . '/..' . '/laminas/laminas-code/src/Reflection/ReflectionInterface.php',
+        'Laminas\\Code\\Scanner\\DocBlockScanner' => __DIR__ . '/..' . '/laminas/laminas-code/src/Scanner/DocBlockScanner.php',
         'Laravel\\Sail\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/InstallCommand.php',
         'Laravel\\Sail\\Console\\PublishCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/PublishCommand.php',
         'Laravel\\Sail\\SailServiceProvider' => __DIR__ . '/..' . '/laravel/sail/src/SailServiceProvider.php',
@@ -5448,6 +5568,32 @@ class ComposerStaticInita08453948c04f4a29b0625cb82546184
         'Whoops\\Util\\Misc' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/Misc.php',
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
+        'hanneskod\\classtools\\Exception' => __DIR__ . '/..' . '/hanneskod/classtools/src/Exception.php',
+        'hanneskod\\classtools\\Exception\\LogicException' => __DIR__ . '/..' . '/hanneskod/classtools/src/Exception/LogicException.php',
+        'hanneskod\\classtools\\Exception\\ReaderException' => __DIR__ . '/..' . '/hanneskod/classtools/src/Exception/ReaderException.php',
+        'hanneskod\\classtools\\Exception\\RuntimeException' => __DIR__ . '/..' . '/hanneskod/classtools/src/Exception/RuntimeException.php',
+        'hanneskod\\classtools\\Instantiator\\Instantiator' => __DIR__ . '/..' . '/hanneskod/classtools/src/Instantiator/Instantiator.php',
+        'hanneskod\\classtools\\Iterator\\ClassIterator' => __DIR__ . '/..' . '/hanneskod/classtools/src/Iterator/ClassIterator.php',
+        'hanneskod\\classtools\\Iterator\\Filter' => __DIR__ . '/..' . '/hanneskod/classtools/src/Iterator/Filter.php',
+        'hanneskod\\classtools\\Iterator\\Filter\\CacheFilter' => __DIR__ . '/..' . '/hanneskod/classtools/src/Iterator/Filter/CacheFilter.php',
+        'hanneskod\\classtools\\Iterator\\Filter\\FilterTrait' => __DIR__ . '/..' . '/hanneskod/classtools/src/Iterator/Filter/FilterTrait.php',
+        'hanneskod\\classtools\\Iterator\\Filter\\NameFilter' => __DIR__ . '/..' . '/hanneskod/classtools/src/Iterator/Filter/NameFilter.php',
+        'hanneskod\\classtools\\Iterator\\Filter\\NamespaceFilter' => __DIR__ . '/..' . '/hanneskod/classtools/src/Iterator/Filter/NamespaceFilter.php',
+        'hanneskod\\classtools\\Iterator\\Filter\\NotFilter' => __DIR__ . '/..' . '/hanneskod/classtools/src/Iterator/Filter/NotFilter.php',
+        'hanneskod\\classtools\\Iterator\\Filter\\TypeFilter' => __DIR__ . '/..' . '/hanneskod/classtools/src/Iterator/Filter/TypeFilter.php',
+        'hanneskod\\classtools\\Iterator\\Filter\\WhereFilter' => __DIR__ . '/..' . '/hanneskod/classtools/src/Iterator/Filter/WhereFilter.php',
+        'hanneskod\\classtools\\Iterator\\SplFileInfo' => __DIR__ . '/..' . '/hanneskod/classtools/src/Iterator/SplFileInfo.php',
+        'hanneskod\\classtools\\Loader\\ClassLoader' => __DIR__ . '/..' . '/hanneskod/classtools/src/Loader/ClassLoader.php',
+        'hanneskod\\classtools\\Name' => __DIR__ . '/..' . '/hanneskod/classtools/src/Name.php',
+        'hanneskod\\classtools\\Transformer\\Action\\CommentStripper' => __DIR__ . '/..' . '/hanneskod/classtools/src/Transformer/Action/CommentStripper.php',
+        'hanneskod\\classtools\\Transformer\\Action\\NameResolver' => __DIR__ . '/..' . '/hanneskod/classtools/src/Transformer/Action/NameResolver.php',
+        'hanneskod\\classtools\\Transformer\\Action\\NamespaceCrawler' => __DIR__ . '/..' . '/hanneskod/classtools/src/Transformer/Action/NamespaceCrawler.php',
+        'hanneskod\\classtools\\Transformer\\Action\\NamespaceWrapper' => __DIR__ . '/..' . '/hanneskod/classtools/src/Transformer/Action/NamespaceWrapper.php',
+        'hanneskod\\classtools\\Transformer\\Action\\NodeStripper' => __DIR__ . '/..' . '/hanneskod/classtools/src/Transformer/Action/NodeStripper.php',
+        'hanneskod\\classtools\\Transformer\\BracketingPrinter' => __DIR__ . '/..' . '/hanneskod/classtools/src/Transformer/BracketingPrinter.php',
+        'hanneskod\\classtools\\Transformer\\MinimizingWriter' => __DIR__ . '/..' . '/hanneskod/classtools/src/Transformer/MinimizingWriter.php',
+        'hanneskod\\classtools\\Transformer\\Reader' => __DIR__ . '/..' . '/hanneskod/classtools/src/Transformer/Reader.php',
+        'hanneskod\\classtools\\Transformer\\Writer' => __DIR__ . '/..' . '/hanneskod/classtools/src/Transformer/Writer.php',
         'voku\\helper\\ASCII' => __DIR__ . '/..' . '/voku/portable-ascii/src/voku/helper/ASCII.php',
     );
 
