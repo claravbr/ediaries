@@ -521,6 +521,11 @@ class ComposerStaticInita08453948c04f4a29b0625cb82546184
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Enums\\DificultadAprendizaje' => __DIR__ . '/../..' . '/app/Enums/DificultadAprendizaje.php',
+        'App\\Enums\\Emocion' => __DIR__ . '/../..' . '/app/Enums/Emocion.php',
+        'App\\Enums\\NivelAcademico' => __DIR__ . '/../..' . '/app/Enums/NivelAcademico.php',
+        'App\\Enums\\Sexo' => __DIR__ . '/../..' . '/app/Enums/Sexo.php',
+        'App\\Enums\\TipoTDAH' => __DIR__ . '/../..' . '/app/Enums/TipoTDAH.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
