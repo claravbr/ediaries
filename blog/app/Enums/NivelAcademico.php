@@ -11,7 +11,18 @@ use BenSampo\Enum\Enum;
  */
 final class NivelAcademico extends Enum
 {
-    const OptionOne =   0;
-    const OptionTwo =   1;
-    const OptionThree = 2;
+    const CeroTres =   0;
+    const TresSeis =   1;
+    const PrimeroPrimaria = 2;
+    const SegundoPrimaria = 3;
+    const TerceroPrimaria = 4;
+    const CuartoPrimaria = 5;
+    const QuintoPrimaria = 6;
+    const SextoPrimaria = 7;
+    const PrimeroEso = 8;
+    const SegundoEso = 9;
+    const TerceroEso = 10;
+    const CuartoEso = 11;
+    const PrimeroBachillerato = 12;
+    const SegundoBachillerato = 13;
 }

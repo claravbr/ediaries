@@ -11,7 +11,7 @@ use BenSampo\Enum\Enum;
  */
 final class TipoTDAH extends Enum
 {
-    const OptionOne =   0;
-    const OptionTwo =   1;
-    const OptionThree = 2;
+    const Inatento =   0;
+    const Combinado =   1;
+    const Hiperactivo = 2;
 }

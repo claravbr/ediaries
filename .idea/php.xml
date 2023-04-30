@@ -134,6 +134,9 @@
       <path value="$PROJECT_DIR$/blog/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/blog/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/blog/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/blog/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/blog/vendor/bensampo/laravel-enum" />
+      <path value="$PROJECT_DIR$/blog/vendor/hanneskod/classtools" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1">

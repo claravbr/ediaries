@@ -11,7 +11,9 @@ use BenSampo\Enum\Enum;
  */
 final class Emocion extends Enum
 {
-    const OptionOne =   0;
-    const OptionTwo =   1;
-    const OptionThree = 2;
+    const Enfadado =   0;
+    const Triste =   1;
+    const Cansado = 2;
+    const Contento = 3;
+    const Emocionado = 4;
 }

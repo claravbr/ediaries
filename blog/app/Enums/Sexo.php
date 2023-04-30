@@ -7,11 +7,10 @@ use BenSampo\Enum\Enum;
 /**
  * @method static static OptionOne()
  * @method static static OptionTwo()
- * @method static static OptionThree()
  */
 final class Sexo extends Enum
 {
-    const OptionOne =   0;
-    const OptionTwo =   1;
-    const OptionThree = 2;
+    const Masculino =   0;
+    const Femenino =   1;
+
 }
