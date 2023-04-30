@@ -15,6 +15,10 @@ class CreateDpersonalesTable extends Migration
     {
         Schema::create('dpersonales', function (Blueprint $table) {
             $table->id();
+            $table->string('sexo');
+            $table->double('peso');
+            $table->double('altura');
+            $table->timestamp('fnacimiento');
             $table->timestamps();
         });
     }

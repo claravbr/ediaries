@@ -15,6 +15,11 @@ class CreateTareadiariaTable extends Migration
     {
         Schema::create('tareadiaria', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->timestamp('fechaIntroduccion');
+            $table->timestamp('fechaLimite');
+            $table->string('prioridad');
+            $table->integer('duracion')->nullable();
             $table->timestamps();
         });
     }

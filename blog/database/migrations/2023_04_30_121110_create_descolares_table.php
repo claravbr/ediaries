@@ -15,6 +15,9 @@ class CreateDescolaresTable extends Migration
     {
         Schema::create('descolares', function (Blueprint $table) {
             $table->id();
+            $table->string('nivelAcademico');
+            $table->string('centroEducativo');
+            $table->boolean('repetidor')->default('false');
             $table->timestamps();
         });
     }

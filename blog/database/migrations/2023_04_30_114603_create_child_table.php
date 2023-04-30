@@ -15,6 +15,11 @@ class CreateChildTable extends Migration
     {
         Schema::create('child', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->string('apellidos');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->string('foto')->nullable();
             $table->timestamps();
         });
     }

@@ -15,6 +15,9 @@ class CreateDiarioemocionesTable extends Migration
     {
         Schema::create('diarioemociones', function (Blueprint $table) {
             $table->id();
+            $table->timestamp('fecha');
+            $table->string('emocion');
+            $table->string('descripcion');
             $table->timestamps();
         });
     }
