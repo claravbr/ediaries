@@ -130,6 +130,9 @@
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/symfony/process" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/laminas/laminas-code" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/bensampo/laravel-enum" />
+      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/hanneskod/classtools" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
