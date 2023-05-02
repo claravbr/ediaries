@@ -10,6 +10,14 @@ class Child extends Usuario
     protected $table = 'child';
 
     /**
+     * The actividadesfavoritas that belong to the child.
+     */
+    public function actividadesfavoritas()
+    {
+        return $this->belongsToMany(ActividadFavorita::class, 'child_actividadfavorita', 'child_id', 'actividadfavorita_id');
+    }
+
+    /**
      * Get the tareasdiarias for the child.
      */
     public function tareasdiarias()
