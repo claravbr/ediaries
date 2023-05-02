@@ -14,13 +14,12 @@ class CreateChildTable extends Migration
     public function up()
     {
         Schema::create('child', function (Blueprint $table) {
-            $table->id();
-            $table->string('nombre');
-            $table->string('apellidos');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->string('foto')->nullable();
+            $table->increments('id'); // El id es un autonumérico.
+            $table->unsignedInteger('usuario_id'); // Agregar columna para la clave foránea
             $table->timestamps();
+
+            $table->foreign('usuario_id') // Definir relación de la clave foránea
+            ->references('id')->on('usuarios')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
