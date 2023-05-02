@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class TareaDiaria extends Model
 {
-    use HasFactory;
+    protected $table = 'tareadiaria';
 
     protected $fillable = [
         'nombre',
@@ -23,5 +23,13 @@ class TareaDiaria extends Model
     public function child()
     {
         return $this->belongsTo(Child::class);
+    }
+
+    /**
+     * Get the categoria that owns the tareadiaria.
+     */
+    public function categoria()
+    {
+        return $this->belongsTo(Categoria::class);
     }
 }
