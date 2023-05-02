@@ -7,20 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Child extends Usuario
 {
-    public static function boot(){
-        parent::boot();
-
-        static::creating(function($child){
-            $child->forceFill(['type'=>self::class]);
-        });
-    }
-
-    public static function booted(){
-        static::addGlobalScope('child', function($builder){
-            $builder->where('type',self::class);
-        });
-    }
-
     protected $table = 'child';
+
+    /**
+     * Get the tareasdiarias for the child.
+     */
+    public function tareasdiarias()
+    {
+        return $this->hasMany(TareaDiaria::class);
+    }
 
 }

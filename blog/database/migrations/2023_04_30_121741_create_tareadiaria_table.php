@@ -15,12 +15,15 @@ class CreateTareadiariaTable extends Migration
     {
         Schema::create('tareadiaria', function (Blueprint $table) {
             $table->increments('id'); // El id es un autonumérico.
+            $table->integer('child_id')->unsigned();
             $table->string('nombre');
             $table->timestamp('fechaIntroduccion');
             $table->timestamp('fechaLimite');
             $table->string('prioridad');
             $table->integer('duracion')->nullable();
             $table->timestamps();
+
+            $table->foreign('child_id')->references('id')->on('child')->onDelete('cascade');
         });
     }
 

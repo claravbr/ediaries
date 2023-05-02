@@ -16,4 +16,12 @@ class TareaDiaria extends Model
         'prioridad',
         'duracion'
     ];
+
+    /**
+     * Get the child that owns the tareadiaria.
+     */
+    public function child()
+    {
+        return $this->belongsTo(Child::class);
+    }
 }
