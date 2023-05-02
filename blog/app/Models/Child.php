@@ -17,4 +17,12 @@ class Child extends Usuario
         return $this->hasMany(TareaDiaria::class);
     }
 
+    /**
+     * Get the dclinicos record associated with the child.
+     */
+    public function dclinicos()
+    {
+        return $this->hasOne(DClinicos::class);
+    }
+
 }

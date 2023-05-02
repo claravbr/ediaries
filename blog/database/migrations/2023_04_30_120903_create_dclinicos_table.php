@@ -15,6 +15,7 @@ class CreateDclinicosTable extends Migration
     {
         Schema::create('dclinicos', function (Blueprint $table) {
             $table->increments('id'); // El id es un autonumérico.
+            $table->integer('child_id')->unsigned();
             $table->string('enfermedad');
             $table->boolean('tdah')->default(false);
             $table->string('tdahTipo')->nullable();
@@ -24,6 +25,8 @@ class CreateDclinicosTable extends Migration
             $table->string('medicacionAntiguedad')->nullable();
             $table->boolean('intervencion')->nullable()->default(false);
             $table->timestamps();
+
+            $table->foreign('child_id')->references('id')->on('child')->onDelete('cascade');
         });
     }
 
