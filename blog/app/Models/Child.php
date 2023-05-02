@@ -18,6 +18,14 @@ class Child extends Usuario
     }
 
     /**
+     * Get the diarioemociones for the child.
+     */
+    public function diarioemociones()
+    {
+        return $this->hasMany(DiarioEmociones::class);
+    }
+
+    /**
      * Get the dclinicos record associated with the child.
      */
     public function dclinicos()
