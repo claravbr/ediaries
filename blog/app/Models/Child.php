@@ -16,18 +16,11 @@ class Child extends Usuario
     }
 
     public static function booted(){
-        static::addGlobalScope('doctor', function($builder){
+        static::addGlobalScope('child', function($builder){
             $builder->where('type',self::class);
         });
     }
 
     protected $table = 'child';
 
-    /**
-     * The ActividadesFavoritas that belong to the Child.
-     */
-    public function actividadesFavoritas()
-    {
-        return $this->belongsToMany(ActividadFavorita::class, 'childactividadfavorita', 'child_id', 'actividadfavorita_id');
-    }
 }

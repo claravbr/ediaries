@@ -24,7 +24,7 @@ class Usuario extends Authenticatable
         'password',
         'nombre',
         'apellidos',
-        'foto'
+        'fotoPath'
     ];
 
     /**
