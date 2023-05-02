@@ -15,4 +15,12 @@ class DPersonales extends Model
         'altura',
         'fnacimiento'
     ];
+
+    /**
+     * Get the child that owns the dpersonales.
+     */
+    public function child()
+    {
+        return $this->belongsTo(Child::class);
+    }
 }

@@ -33,4 +33,12 @@ class Child extends Usuario
         return $this->hasOne(DEscolares::class);
     }
 
+    /**
+     * Get the dpersonales record associated with the child.
+     */
+    public function dpersonales()
+    {
+        return $this->hasOne(DPersonales::class);
+    }
+
 }
