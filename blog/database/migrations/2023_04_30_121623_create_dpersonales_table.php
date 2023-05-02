@@ -14,7 +14,7 @@ class CreateDpersonalesTable extends Migration
     public function up()
     {
         Schema::create('dpersonales', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id'); // El id es un autonumérico.
             $table->string('sexo');
             $table->double('peso');
             $table->double('altura');

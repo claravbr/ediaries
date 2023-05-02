@@ -14,7 +14,7 @@ class CreateActividadfavoritaTable extends Migration
     public function up()
     {
         Schema::create('actividadfavorita', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id'); // El id es un autonumérico.
             $table->string('nombre');
             $table->timestamps();
         });

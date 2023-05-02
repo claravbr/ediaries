@@ -14,7 +14,7 @@ class CreateDiarioemocionesTable extends Migration
     public function up()
     {
         Schema::create('diarioemociones', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id'); // El id es un autonumérico.
             $table->timestamp('fecha');
             $table->string('emocion');
             $table->string('descripcion');

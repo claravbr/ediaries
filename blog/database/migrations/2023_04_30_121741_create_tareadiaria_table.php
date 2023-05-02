@@ -14,7 +14,7 @@ class CreateTareadiariaTable extends Migration
     public function up()
     {
         Schema::create('tareadiaria', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id'); // El id es un autonumérico.
             $table->string('nombre');
             $table->timestamp('fechaIntroduccion');
             $table->timestamp('fechaLimite');
