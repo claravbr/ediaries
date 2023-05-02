@@ -14,4 +14,12 @@ class DEscolares extends Model
         'centroEducativo',
         'repetidor'
     ];
+
+    /**
+     * Get the child that owns the descolares.
+     */
+    public function child()
+    {
+        return $this->belongsTo(Child::class);
+    }
 }

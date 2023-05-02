@@ -25,4 +25,12 @@ class Child extends Usuario
         return $this->hasOne(DClinicos::class);
     }
 
+    /**
+     * Get the descolares record associated with the child.
+     */
+    public function descolares()
+    {
+        return $this->hasOne(DEscolares::class);
+    }
+
 }
