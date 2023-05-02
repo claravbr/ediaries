@@ -7,13 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Child extends Usuario
 {
-    use HasFactory;
+    public static function boot(){
+        parent::boot();
 
-    /**
-     * The ActividadesFavoritas that belong to the Child.
-     */
-    public function actividadesFavoritas()
-    {
-        return $this->belongsToMany(ActividadFavorita::class, 'child_actividadfavorita', 'child_id', 'actividadfavorita_id');
+        static::creating(function($child){
+            $child->forceFill(['type'=>self::class]);
+        });
     }
+
+    public static function booted(){
+        static::addGlobalScope('child', function($builder){
+            $builder->where('type',self::class);
+        });
+    }
+
+    protected $table = 'child';
+
 }

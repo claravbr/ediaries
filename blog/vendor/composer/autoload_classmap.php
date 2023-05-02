@@ -7,6 +7,11 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Enums\\DificultadAprendizaje' => $baseDir . '/app/Enums/DificultadAprendizaje.php',
+    'App\\Enums\\Emocion' => $baseDir . '/app/Enums/Emocion.php',
+    'App\\Enums\\NivelAcademico' => $baseDir . '/app/Enums/NivelAcademico.php',
+    'App\\Enums\\Sexo' => $baseDir . '/app/Enums/Sexo.php',
+    'App\\Enums\\TipoTDAH' => $baseDir . '/app/Enums/TipoTDAH.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
