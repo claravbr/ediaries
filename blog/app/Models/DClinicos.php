@@ -17,6 +17,7 @@ class DClinicos extends Model
         'dificultad',
         'medicacion',
         'medicacionAntiguedad',
+        'medicacionInfo',
         'intervencion'
     ];
 
