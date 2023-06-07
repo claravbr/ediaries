@@ -15,7 +15,7 @@ class CreateDpersonalesTable extends Migration
     {
         Schema::create('dpersonales', function (Blueprint $table) {
             $table->increments('id'); // El id es un autonumérico.
-            $table->integer('child_id')->unsigned();
+            $table->integer('child_id')->unsigned()->unique()->nullable(false);
             $table->string('sexo');
             $table->double('peso');
             $table->double('altura');
