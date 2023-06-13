@@ -17,10 +17,10 @@ class CreateTareadiariaTable extends Migration
             $table->increments('id'); // El id es un autonumérico.
             $table->integer('child_id')->unsigned();
             $table->integer('categoria_id')->unsigned();
-            $table->string('nombre');
+            $table->string('nombre',50);
             $table->timestamp('fechaIntroduccion');
             $table->timestamp('fechaLimite');
-            $table->string('prioridad');
+            $table->string('prioridad',10);
             $table->integer('duracion')->nullable();
             $table->timestamps();
 

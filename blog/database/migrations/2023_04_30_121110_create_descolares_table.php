@@ -16,8 +16,8 @@ class CreateDescolaresTable extends Migration
         Schema::create('descolares', function (Blueprint $table) {
             $table->increments('id'); // El id es un autonumérico.
             $table->integer('child_id')->unsigned()->unique()->nullable(false);
-            $table->string('nivelAcademico');
-            $table->string('centroEducativo');
+            $table->string('nivelAcademico',30);
+            $table->string('centroEducativo',50);
             $table->boolean('repetidor')->default(false);
             $table->timestamps();
 
