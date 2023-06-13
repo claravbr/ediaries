@@ -55,7 +55,6 @@
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/phpunit/php-invoker" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/laravel/sail" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/phpunit/php-text-template" />
-      <excludeFolder url="file://$MODULE_DIR$/blog/vendor/laravel/sanctum" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/phpunit/phpunit" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/laravel/tinker" />
       <excludeFolder url="file://$MODULE_DIR$/blog/vendor/phpunit/php-timer" />

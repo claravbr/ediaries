@@ -59,7 +59,6 @@
       <path value="$PROJECT_DIR$/blog/vendor/phpunit/php-invoker" />
       <path value="$PROJECT_DIR$/blog/vendor/laravel/sail" />
       <path value="$PROJECT_DIR$/blog/vendor/phpunit/php-text-template" />
-      <path value="$PROJECT_DIR$/blog/vendor/laravel/sanctum" />
       <path value="$PROJECT_DIR$/blog/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/blog/vendor/laravel/tinker" />
       <path value="$PROJECT_DIR$/blog/vendor/phpunit/php-timer" />
@@ -139,7 +138,7 @@
       <path value="$PROJECT_DIR$/blog/vendor/hanneskod/classtools" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.1">
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.1">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
   <component name="PhpStanOptionsConfiguration">

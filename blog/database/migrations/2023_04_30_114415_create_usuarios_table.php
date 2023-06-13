@@ -20,7 +20,6 @@ class CreateUsuariosTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('fotoPath')->nullable();
-            $table->string('tipo');
             $table->rememberToken();
             $table->timestamps();
         });
