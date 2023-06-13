@@ -17,6 +17,15 @@ class DClinicos extends Model
         'dificultad',
         'medicacion',
         'medicacionAntiguedad',
+        'medicacionInfo',
         'intervencion'
     ];
+
+    /**
+     * Get the child that owns the dclinicos.
+     */
+    public function child()
+    {
+        return $this->belongsTo(Child::class);
+    }
 }

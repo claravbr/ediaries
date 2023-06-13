@@ -7,10 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class ActividadFavorita extends Model
 {
-    use HasFactory;
+    protected $table = 'actividadfavorita';
     protected $fillable = [
         'nombre'
     ];
+
+    /**
+     * The childs that belong to the actividadfavorita.
+     */
+    public function childs()
+    {
+        return $this->belongsToMany(Child::class, 'child_actividadfavorita', 'actividadfavorita_id', 'child_id');
+    }
 
     /**
      * The children that belong to the actividadfavorita

@@ -7,20 +7,59 @@ use Illuminate\Database\Eloquent\Model;
 
 class Child extends Usuario
 {
-    public static function boot(){
-        parent::boot();
-
-        static::creating(function($child){
-            $child->forceFill(['type'=>self::class]);
-        });
-    }
-
-    public static function booted(){
-        static::addGlobalScope('child', function($builder){
-            $builder->where('type',self::class);
-        });
-    }
-
     protected $table = 'child';
+
+    /**
+     * The actividadesfavoritas that belong to the child.
+     */
+    public function actividadesfavoritas()
+    {
+        return $this->belongsToMany(ActividadFavorita::class, 'child_actividadfavorita', 'child_id', 'actividadfavorita_id');
+    }
+
+    /**
+     * Get the tareasdiarias for the child.
+     */
+    public function tareasdiarias()
+    {
+        return $this->hasMany(TareaDiaria::class)->with('categoria');
+    }
+
+    /**
+     * Get the diarioemociones for the child.
+     */
+    public function diarioemociones()
+    {
+        return $this->hasMany(DiarioEmociones::class);
+    }
+
+    /**
+     * Get the dclinicos record associated with the child.
+     */
+    public function dclinicos()
+    {
+        return $this->hasOne(DClinicos::class);
+    }
+
+    /**
+     * Get the descolares record associated with the child.
+     */
+    public function descolares()
+    {
+        return $this->hasOne(DEscolares::class);
+    }
+
+    /**
+     * Get the dpersonales record associated with the child.
+     */
+    public function dpersonales()
+    {
+        return $this->hasOne(DPersonales::class);
+    }
+
+    public function usuario()
+    {
+        return $this->hasOne(Usuario::class, 'id', 'usuario_id');
+    }
 
 }

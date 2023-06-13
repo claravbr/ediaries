@@ -11,6 +11,8 @@ use BenSampo\Enum\Enum;
  */
 final class DificultadAprendizaje extends Enum
 {
-    const Leer =   0;
-    const Matematicas =   1;
+    const Dislexia =   0;
+    const Discalculia =   1;
+    const Disgrafia = 2;
+    const Transtorno_coordinacion_movimiento = 3;
 }

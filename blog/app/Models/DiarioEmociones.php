@@ -14,4 +14,12 @@ class DiarioEmociones extends Model
         'emocion',
         'descripcion'
     ];
+
+    /**
+     * Get the child that owns the diarioemociones.
+     */
+    public function child()
+    {
+        return $this->belongsTo(Child::class);
+    }
 }

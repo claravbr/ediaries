@@ -15,11 +15,14 @@ class CreateDpersonalesTable extends Migration
     {
         Schema::create('dpersonales', function (Blueprint $table) {
             $table->increments('id'); // El id es un autonumérico.
+            $table->integer('child_id')->unsigned()->unique()->nullable(false);
             $table->string('sexo');
             $table->double('peso');
             $table->double('altura');
             $table->timestamp('fnacimiento');
             $table->timestamps();
+
+            $table->foreign('child_id')->references('id')->on('child')->onDelete('cascade');
         });
     }
 
