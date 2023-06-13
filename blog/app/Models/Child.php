@@ -22,7 +22,7 @@ class Child extends Usuario
      */
     public function tareasdiarias()
     {
-        return $this->hasMany(TareaDiaria::class);
+        return $this->hasMany(TareaDiaria::class)->with('categoria');
     }
 
     /**
@@ -55,6 +55,11 @@ class Child extends Usuario
     public function dpersonales()
     {
         return $this->hasOne(DPersonales::class);
+    }
+
+    public function usuario()
+    {
+        return $this->hasOne(Usuario::class, 'id', 'usuario_id');
     }
 
 }
