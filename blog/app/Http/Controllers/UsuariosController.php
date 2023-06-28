@@ -26,8 +26,11 @@ class UsuariosController extends Controller
         // Hacer la validación
         $input = $request->all();
         $validator = Validator::make($input, [
-            'name' => 'required|max:100',
-            'type' => 'required'
+            'nombre' => 'required|max:20',
+            'apellidos' => 'required|max:20',
+            'email' => 'required|email|unique:usuarios,email|max:50',
+            'password' => 'required|max:50',
+            'fotoPath' => 'nullable',
         ]);
 
         if ($validator->fails()) {
@@ -52,8 +55,11 @@ class UsuariosController extends Controller
         // Hacer la validación de que los datos que vienen en la petición son válidos.
         $input = $request->all();
         $validator = Validator::make($input, [
-            'name' => 'required|max:100',
-            'type' => 'required'
+            'nombre' => 'required|max:20',
+            'apellidos' => 'required|max:20',
+            'email' => 'required|unique|max:50',
+            'password' => 'required|max:50',
+            'fotoPath' => 'nullable',
         ]);
 
         if ($validator->fails()) {
@@ -62,6 +68,6 @@ class UsuariosController extends Controller
 
         $usuario->update($request->all());
 
-        return response()->json($usuario, 200);
+        return response()->json($usuario, 200); //Código 200: OK
     }
 }
