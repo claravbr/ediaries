@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class ChildActividadFavorita extends Model
 {
-
+    protected $table = 'child_actividadfavorita';
 }

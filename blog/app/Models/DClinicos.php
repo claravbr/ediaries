@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class DClinicos extends Model
 {
+    protected $table = 'dclinicos';
+
     use HasFactory;
 
     protected $fillable = [

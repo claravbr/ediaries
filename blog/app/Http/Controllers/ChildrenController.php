@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Child;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ChildrenController extends Controller
 {
@@ -29,7 +30,7 @@ class ChildrenController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json($validator->errors(), 422);
+            return response()->json($validator->errors(), 400);
         }
 
         $child = Child::create($request->all());
@@ -61,5 +62,6 @@ class ChildrenController extends Controller
 
         return response()->json($child, 200); //Código 200: OK
     }
+
 
 }

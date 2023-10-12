@@ -20,7 +20,7 @@ class CreateDclinicosTable extends Migration
             $table->boolean('tdah')->default(false);
             $table->string('tdahTipo',20)->nullable();
             $table->integer('tdahEdad')->nullable();
-            $table->string('dificultad',20)->nullable();
+            $table->string('dificultad',50)->nullable();
             $table->boolean('medicacion')->default(false);
             $table->string('medicacionAntiguedad',20)->nullable();
             $table->string('medicacionInfo',50)->nullable();

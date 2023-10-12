@@ -10,6 +10,8 @@ class TareaDiaria extends Model
     protected $table = 'tareadiaria';
 
     protected $fillable = [
+        'child_id',
+        'categoria_id',
         'nombre',
         'fechaIntroduccion',
         'fechaLimite',
