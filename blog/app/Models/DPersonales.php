@@ -11,6 +11,7 @@ class DPersonales extends Model
     protected $table = 'dpersonales';
 
     protected $fillable = [
+        'child_id',
         'sexo',
         'peso',
         'altura',

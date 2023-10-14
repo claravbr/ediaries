@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Child;
 use Illuminate\Http\Request;
 use App\Models\Usuario;
 use Illuminate\Support\Facades\Validator;
@@ -39,6 +40,11 @@ class UsuariosController extends Controller
 
         $usuario= Usuario::create($request->all());
 
+        // Se crea también el child asociado al usuario
+        $child = new Child();
+        $child->usuario_id = $usuario->id;
+        $child->save();
+
         return response()->json($usuario, 201); // Código 201: created.
     }
 
@@ -63,7 +69,7 @@ class UsuariosController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json($validator->errors(), 422);
+            return response()->json($validator->errors(), 400);
         }
 
         $usuario->update($request->all());
