@@ -12,6 +12,7 @@ class DEscolares extends Model
     use HasFactory;
 
     protected $fillable = [
+        'child_id',
         'nivelAcademico',
         'centroEducativo',
         'repetidor'
