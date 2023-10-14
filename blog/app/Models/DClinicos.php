@@ -12,6 +12,7 @@ class DClinicos extends Model
     use HasFactory;
 
     protected $fillable = [
+        'child_id',
         'enfermedad',
         'tdah',
         'tdahTipo',
