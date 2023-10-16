@@ -24,7 +24,7 @@ class DPersonalesController extends Controller
     // Crear un nuevo registro de dpersonales en la base de datos
     public function store(Request $request)
     {
-        $request['fnacimiento'] = Carbon::parse($request->fnacimiento); // Convierte la fecha a un objeto Carbon.
+        $request['fnacimiento'] = Carbon::createFromFormat('d/m/Y', $request->fnacimiento); // Convierte la fecha a un objeto Carbon.
         // Validar los datos de entrada
         $validator = Validator::make($request->all(), [
             'child_id' => 'required|integer|exists:child,id',
