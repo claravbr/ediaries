@@ -39,6 +39,7 @@ Route::resource('child/', ChildrenController::class);
 Route::resource('child/diario-emociones/', DiarioEmocionesController::class);
 Route::resource('child/tarea-diaria/', TareaDiariaController::class);
 
+Route::get('usuario/get-child/{usuarioId}', [ChildrenController::class, 'getChildByIdUsuario']);
 
 // -- DIARIO EMOCIONES --
 Route::get('child/diario-emociones/{childId}', [DiarioEmocionesController::class, 'getAllDiarioEmocionesForChild']);

@@ -20,6 +20,18 @@ class ChildrenController extends Controller
         return Child::findOrFail($id)::with('usuario')->get();
     }
 
+    // Buscar Child por el id del Usuario
+    public function getChildByIdUsuario($usuarioId){
+        $child = Child::where('usuario_id', $usuarioId)->first();
+
+        if (!$child) {
+            return response()->json(['message' => 'Child no encontrado para este usuario'], 404);
+        }
+
+        return response()->json($child, 200);
+
+    }
+
     // Introducir objeto en la BBDD
     public function store(Request $request)
     {

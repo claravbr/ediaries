@@ -45,7 +45,7 @@ class UsuariosController extends Controller
         $child->usuario_id = $usuario->id;
         $child->save();
 
-        return response()->json($usuario, 201); // Código 201: created.
+        return response()->json(['usuario' => $usuario, 'child_id' => $child->id], 200);
     }
 
     // Borrar objeto de la BBDD
