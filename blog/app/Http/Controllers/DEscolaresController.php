@@ -38,7 +38,7 @@ class DEscolaresController extends Controller
 
         $escolares = DEscolares::create($request->all());
 
-        return response()->json($escolares, 201); // Código 201: Created
+        return response()->json($escolares, 200);
     }
 
     // Actualizar un registro de datos escolares en la base de datos por su ID

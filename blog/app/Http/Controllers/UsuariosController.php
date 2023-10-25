@@ -22,7 +22,7 @@ class UsuariosController extends Controller
     }
 
     // Introducir objeto en la BBDD
-    public function store(Request $request)
+    public function register(Request $request)
     {
         // Hacer la validación
         $input = $request->all();
@@ -35,17 +35,25 @@ class UsuariosController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json($validator->errors(), 422);
+            return response()->json($validator->errors(), 400);
         }
 
-        $usuario= Usuario::create($request->all());
+        $usuario= Usuario::create([
+            'nombre' => $request->nombre,
+            'apellidos' => $request->apellidos,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'fotoPath' => $request->fotoPath
+        ]);
+
+        $token = $usuario->createToken('Laravel8PassportAuth')->accessToken;
 
         // Se crea también el child asociado al usuario
         $child = new Child();
         $child->usuario_id = $usuario->id;
         $child->save();
 
-        return response()->json(['usuario' => $usuario, 'child_id' => $child->id], 200);
+        return response()->json(['usuario' => $usuario, 'child_id' => $child->id, 'token' => $token], 200);
     }
 
     // Borrar objeto de la BBDD
