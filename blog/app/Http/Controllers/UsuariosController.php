@@ -76,4 +76,21 @@ class UsuariosController extends Controller
 
         return response()->json($usuario, 200); //Código 200: OK
     }
+
+    // Comprueba si el email ya está en uso
+    public function checkEmail(Request $request)
+    {
+        $email = $request->input('email');
+
+        // Buscar un usuario con el email proporcionado
+        $usuario = Usuario::where('email', $email)->first();
+
+        if ($usuario) {
+            // Si se encuentra un usuario con ese email, devuelve true
+            return response()->json(true);
+        } else {
+            // Si no se encuentra un usuario con ese email, devuelve false
+            return response()->json(false);
+        }
+    }
 }
