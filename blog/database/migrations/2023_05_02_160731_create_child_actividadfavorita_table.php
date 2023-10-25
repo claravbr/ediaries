@@ -16,6 +16,7 @@ class CreateChildActividadfavoritaTable extends Migration
         Schema::create('child_actividadfavorita', function (Blueprint $table) {
             $table->integer('child_id')->unsigned();
             $table->integer('actividadfavorita_id')->unsigned();
+            $table->timestamps();
 
             $table->foreign('child_id')->references('id')->on('child')->onDelete('cascade');
             $table->foreign('actividadfavorita_id')->references('id')->on('actividadfavorita')->onDelete('cascade');

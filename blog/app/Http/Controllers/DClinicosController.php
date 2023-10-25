@@ -39,12 +39,12 @@ class DClinicosController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json($validator->errors(), 422);
+            return response()->json($validator->errors(), 400);
         }
 
         $clinicos = DClinicos::create($request->all());
 
-        return response()->json($clinicos, 201); // Código 201: Created
+        return response()->json($clinicos, 200); // Código 201: Created
     }
 
     // Actualizar una historia clínica en la base de datos por su ID
@@ -66,7 +66,7 @@ class DClinicosController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json($validator->errors(), 422);
+            return response()->json($validator->errors(), 400);
         }
 
         $clinicos = DClinicos::findOrFail($id);

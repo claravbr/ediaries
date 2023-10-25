@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ChildActividadFavoritaController;
 use App\Http\Controllers\ChildrenController;
 use App\Http\Controllers\DClinicosController;
 use App\Http\Controllers\DEscolaresController;
@@ -40,6 +41,10 @@ Route::resource('child/diario-emociones/', DiarioEmocionesController::class);
 Route::resource('child/tarea-diaria/', TareaDiariaController::class);
 
 Route::get('usuario/get-child/{usuarioId}', [ChildrenController::class, 'getChildByIdUsuario']);
+
+Route::post('usuario/check-email', [UsuariosController::class, 'checkEmail']);
+
+Route::post('usuario/actividades-favoritas', [ChildActividadFavoritaController::class, 'createActividadesFavoritas']);
 
 // -- DIARIO EMOCIONES --
 Route::get('child/diario-emociones/{childId}', [DiarioEmocionesController::class, 'getAllDiarioEmocionesForChild']);
