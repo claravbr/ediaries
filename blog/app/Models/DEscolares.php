@@ -7,9 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class DEscolares extends Model
 {
+    protected $table = 'descolares';
+
     use HasFactory;
 
     protected $fillable = [
+        'child_id',
         'nivelAcademico',
         'centroEducativo',
         'repetidor'

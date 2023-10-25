@@ -18,7 +18,7 @@ class Child extends Usuario
     }
 
     /**
-     * Get the tareasdiarias for the child.
+     * Get the tareasdiarias of the child.
      */
     public function tareasdiarias()
     {
@@ -26,7 +26,7 @@ class Child extends Usuario
     }
 
     /**
-     * Get the diarioemociones for the child.
+     * Get the diarioemociones of the child.
      */
     public function diarioemociones()
     {

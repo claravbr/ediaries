@@ -9,7 +9,10 @@ class DiarioEmociones extends Model
 {
     use HasFactory;
 
+    protected $table = 'diarioemociones';
+
     protected $fillable = [
+        'child_id',
         'fecha',
         'emocion',
         'descripcion'
