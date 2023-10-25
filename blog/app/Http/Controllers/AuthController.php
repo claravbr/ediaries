@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
+use App\Models\Child;
 use Illuminate\Http\Request;
 
 use App\Models\Usuario;
@@ -18,7 +19,7 @@ class AuthController extends Controller
         $this->validate($request, [
             'nombre' => 'required|min:4',
             'apellidos' => 'required|min:4',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:usuarios,email|max:50',
             'password' => 'required|min:8',
         ]);
 
@@ -27,12 +28,17 @@ class AuthController extends Controller
             'apellidos' => $request->apellidos,
             'email' => $request->email,
             'password' => bcrypt($request->password),
-            'fotoPath' => $request->fotopath
+            'fotoPath' => $request->fotoPath
         ]);
 
         $token = $usuario->createToken('Laravel8PassportAuth')->accessToken;
 
-        return response()->json(['token' => $token], 200);
+        // Se crea también el child asociado al usuario
+        $child = new Child();
+        $child->usuario_id = $usuario->id;
+        $child->save();
+
+        return response()->json(['usuario' => $usuario, 'child_id' => $child->id, 'token' => $token], 200);
     }
 
     /**
@@ -47,9 +53,11 @@ class AuthController extends Controller
 
         if (auth()->attempt($data)) {
             $token = auth()->user()->createToken('Laravel8PassportAuth')->accessToken;
-            return response()->json(['token' => $token], 200);
+            $usuario = auth()->user();
+
+            return response()->json(['usuario' => $usuario, 'token' => $token], 200);
         } else {
-            return response()->json(['error' => 'Unauthorised'], 401);
+            return response()->json(['error' => 'Unauthorized'], 401);
         }
     }
 
