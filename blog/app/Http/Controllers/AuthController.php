@@ -55,7 +55,10 @@ class AuthController extends Controller
             $token = auth()->user()->createToken('Laravel8PassportAuth')->accessToken;
             $usuario = auth()->user();
 
-            return response()->json(['usuario' => $usuario, 'token' => $token], 200);
+            // Buscar el child del usuario
+            $child = Child::where('usuario_id', $usuario->id)->first();
+
+            return response()->json(['usuario' => $usuario, 'child_id' => ($child->id),'token' => $token], 200);
         } else {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
