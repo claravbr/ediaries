@@ -21,6 +21,14 @@ class TareaDiariaController extends Controller
         return TareaDiaria::findOrFail($id)::with('categoria')->get();
     }
 
+    // Buscar todas las tareas de un child
+    public function getTareasByChildId($child_id)
+    {
+        $tareaDiarias = TareaDiaria::where('child_id', $child_id)->with('categoria')->get();
+
+        return response()->json($tareaDiarias, 200);
+    }
+
     // Crear una nueva tarea diaria en la base de datos
     public function store(Request $request)
     {
