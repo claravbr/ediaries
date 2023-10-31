@@ -38,7 +38,18 @@ Route::resource('usuario/datos-escolares/', DEscolaresController::class);
 // -- DATOS DE USO DE APLICACIÓN --
 Route::resource('child/', ChildrenController::class);
 Route::resource('child/diario-emociones/', DiarioEmocionesController::class);
-Route::resource('child/tarea-diaria/', TareaDiariaController::class);
+Route::resource('tarea-diaria/', TareaDiariaController::class);
+
+Route::get('tarea-diaria/get-tareas/{childId}', [TareaDiariaController::class, 'getTareasByChildId']);
+
+
+
+
+
+
+
+
+
 
 Route::get('usuario/get-child/{usuarioId}', [ChildrenController::class, 'getChildByIdUsuario']);
 
@@ -51,8 +62,8 @@ Route::get('child/diario-emociones/{childId}', [DiarioEmocionesController::class
 Route::post('child/diario-emociones/new', [DiarioEmocionesController::class, 'store']);
 
 // -- TAREAS DIARIAS --
-Route::post('child/tarea-diaria/new', [TareaDiariaController::class, 'store']);
-Route::put('child/tarea-diaria/update/{idTarea}', [TareaDiariaController::class, 'update']);
+Route::post('tarea-diaria/new', [TareaDiariaController::class, 'store']);
+Route::put('tarea-diaria/update/{idTarea}', [TareaDiariaController::class, 'update']);
 
 
 
