@@ -16,14 +16,14 @@ class CreateDclinicosTable extends Migration
         Schema::create('dclinicos', function (Blueprint $table) {
             $table->increments('id'); // El id es un autonumérico.
             $table->integer('child_id')->unsigned()->unique()->nullable(false);
-            $table->string('enfermedad',20)->nullable();
+            $table->string('enfermedad')->nullable();
             $table->boolean('tdah')->default(false);
-            $table->string('tdahTipo',20)->nullable();
+            $table->string('tdahTipo')->nullable();
             $table->integer('tdahEdad')->nullable();
-            $table->string('dificultad',50)->nullable();
+            $table->string('dificultad')->nullable();
             $table->boolean('medicacion')->default(false);
-            $table->string('medicacionAntiguedad',20)->nullable();
-            $table->string('medicacionInfo',50)->nullable();
+            $table->string('medicacionAntiguedad')->nullable();
+            $table->string('medicacionInfo')->nullable();
             $table->boolean('intervencion')->nullable()->default(false);
             $table->timestamps();
 

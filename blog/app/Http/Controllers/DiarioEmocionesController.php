@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Child;
 use App\Models\DiarioEmociones;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Validator;
 
 class DiarioEmocionesController extends Controller
@@ -40,12 +41,11 @@ class DiarioEmocionesController extends Controller
     public function store(Request $request)
     {
         // Hacer la validación
-        $input = $request->all();
-        $validator = Validator::make($input, [
+        $request['fecha'] = Carbon::now();
+        $validator = Validator::make($request->all(), [
             'child_id' => 'required|integer',
-            'fecha' => 'required|date',
             'emocion' => 'required|string|max:20',
-            'descripcion' => 'required|string|max:50',
+            'descripcion' => 'required|string',
         ]);
 
         if ($validator->fails()) {
@@ -79,7 +79,7 @@ class DiarioEmocionesController extends Controller
             'child_id' => 'required|integer',
             'fecha' => 'required|date',
             'emocion' => 'required|string|max:20',
-            'descripcion' => 'required|string|max:50',
+            'descripcion' => 'required|string',
         ]);
 
         if ($validator->fails()) {

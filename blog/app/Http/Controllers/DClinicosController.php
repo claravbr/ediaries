@@ -27,14 +27,14 @@ class DClinicosController extends Controller
         $input = $request->all();
         $validator = Validator::make($input, [
             'child_id' => 'required|integer',
-            'enfermedad' => 'nullable|string|max:20',
+            'enfermedad' => 'nullable|string',
             'tdah' => 'boolean',
-            'tdahTipo' => 'nullable|string|max:20',
+            'tdahTipo' => 'nullable|string',
             'tdahEdad' => 'nullable|integer',
-            'dificultad' => 'nullable|string|max:50',
+            'dificultad' => 'nullable|string',
             'medicacion' => 'boolean',
-            'medicacionAntiguedad' => 'nullable|string|max:20',
-            'medicacionInfo' => 'nullable|string|max:50',
+            'medicacionAntiguedad' => 'nullable|string',
+            'medicacionInfo' => 'nullable|string',
             'intervencion' => 'boolean',
         ]);
 

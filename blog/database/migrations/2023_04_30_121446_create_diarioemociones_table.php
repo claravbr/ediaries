@@ -18,7 +18,7 @@ class CreateDiarioemocionesTable extends Migration
             $table->integer('child_id')->unsigned();
             $table->timestamp('fecha');
             $table->string('emocion',20);
-            $table->string('descripcion',50);
+            $table->string('descripcion');
             $table->timestamps();
 
             $table->foreign('child_id')->references('id')->on('child')
