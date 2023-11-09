@@ -22,6 +22,7 @@ class CreateTareadiariaTable extends Migration
             $table->timestamp('fechaLimite');
             $table->string('prioridad',10);
             $table->integer('duracion')->nullable();
+            $table->boolean('terminada')->default(false);
             $table->timestamps();
 
             $table->foreign('child_id')->references('id')->on('child')

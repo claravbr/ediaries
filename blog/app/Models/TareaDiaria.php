@@ -16,7 +16,8 @@ class TareaDiaria extends Model
         'fechaIntroduccion',
         'fechaLimite',
         'prioridad',
-        'duracion'
+        'duracion',
+        'terminada'
     ];
 
     /**
