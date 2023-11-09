@@ -55,6 +55,27 @@ class TareaDiariaController extends Controller
         return response()->json($tareaDiaria, 200);
     }
 
+    // Marcar una tarea como terminada
+    public function tareaTerminada($id)
+    {
+        // Buscar la tarea diaria por su ID
+        $tareaDiaria = TareaDiaria::find($id);
+
+        // Verificar si se encontró la tarea
+        if (!$tareaDiaria) {
+            return response()->json(['message' => 'Tarea diaria no encontrada'], 404);
+        }
+
+        try {
+            $tareaDiaria->terminada = true;
+            $tareaDiaria->save();
+
+            return response()->json(null, 204);
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'Error al marcar la tarea como terminada', 'error' => $e->getMessage()], 500);
+        }
+    }
+
     // Eliminar una tarea diaria de la base de datos
     public function destroy($id)
     {

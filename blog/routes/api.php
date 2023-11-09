@@ -43,6 +43,7 @@ Route::resource('tarea-diaria/', TareaDiariaController::class);
 // -- TAREAS DIARIAS --
 Route::post('tarea-diaria/new', [TareaDiariaController::class, 'store']);
 Route::get('tarea-diaria/get-tareas/{childId}', [TareaDiariaController::class, 'getTareasByChildId']);
+Route::put('tarea-diaria/{tareaId}/done', [TareaDiariaController::class, 'tareaTerminada']);
 Route::delete('tarea-diaria/{tareaId}', [TareaDiariaController::class, 'destroy']);
 
 // -- DIARIO EMOCIONES --
