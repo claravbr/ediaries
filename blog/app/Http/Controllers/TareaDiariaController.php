@@ -33,7 +33,7 @@ class TareaDiariaController extends Controller
     public function store(Request $request)
     {
         $request['fechaIntroduccion'] = Carbon::now();
-        $request['terminada'] = false;
+        $request['terminada'] = 0;
         $request['fechaLimite'] = Carbon::createFromFormat('d/m/Y', $request->fechaLimite); // Convierte la fecha a un objeto Carbon.
         // Validar los datos de entrada
         $validator = Validator::make($request->all(), [
@@ -42,8 +42,7 @@ class TareaDiariaController extends Controller
             'nombre' => 'required|string|max:50',
             'fechaLimite' => 'required|date|after_or_equal:fechaIntroduccion',
             'prioridad' => 'required|string|max:10',
-            'duracion' => 'nullable|integer',
-            'terminada' => 'boolean'
+            'duracion' => 'nullable|integer'
         ]);
 
         if ($validator->fails()) {
