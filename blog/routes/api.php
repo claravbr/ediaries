@@ -45,34 +45,11 @@ Route::post('tarea-diaria/new', [TareaDiariaController::class, 'store']);
 Route::get('tarea-diaria/get-tareas/{childId}', [TareaDiariaController::class, 'getTareasByChildId']);
 Route::put('tarea-diaria/{tareaId}/done', [TareaDiariaController::class, 'tareaTerminada']);
 Route::delete('tarea-diaria/{tareaId}', [TareaDiariaController::class, 'destroy']);
+Route::put('tarea-diaria/update/{idTarea}', [TareaDiariaController::class, 'update']);
 
 // -- DIARIO EMOCIONES --
 Route::post('diario-emociones/new', [DiarioEmocionesController::class, 'store']);
+//Route::get('child/diario-emociones/{childId}', [DiarioEmocionesController::class, 'getAllDiarioEmocionesForChild']);
 
-
-
-
-
-
-
-
-
-Route::get('usuario/get-child/{usuarioId}', [ChildrenController::class, 'getChildByIdUsuario']);
-
-Route::post('usuario/check-email', [UsuariosController::class, 'checkEmail']);
-
+// -- ACTIVIDADES FAVORITAS --
 Route::post('usuario/actividades-favoritas', [ChildActividadFavoritaController::class, 'createActividadesFavoritas']);
-
-
-Route::get('child/diario-emociones/{childId}', [DiarioEmocionesController::class, 'getAllDiarioEmocionesForChild']);
-
-
-
-
-Route::put('tarea-diaria/update/{idTarea}', [TareaDiariaController::class, 'update']);
-
-
-
-
-
-

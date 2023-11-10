@@ -96,6 +96,7 @@ class TareaDiariaController extends Controller
     // Actualizar una tarea diaria en la base de datos
     public function update(Request $request, $id)
     {
+        $request['fechaLimite'] = Carbon::createFromFormat('d/m/Y', $request->fechaLimite); // Convierte la fecha a un objeto Carbon.
         // Validar los datos de entrada
         $validator = Validator::make($request->all(), [
             'categoria_id' => 'required|integer',
