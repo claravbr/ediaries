@@ -24,6 +24,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('usuario/register', [UsuariosController::class, 'register']);
 Route::post('auth/login', [AuthController::class, 'login']);
+Route::post('datos-personales/', [DPersonalesController::class, 'store']);
+Route::post('datos-clinicos/', [DClinicosController::class, 'store']);
+Route::post('datos-escolares/', [DEscolaresController::class, 'store']);
+// -- ACTIVIDADES FAVORITAS --
+Route::post('actividades-favoritas/', [ChildActividadFavoritaController::class, 'createActividadesFavoritas']);
 
 Route::middleware('auth:api')->group(function () {
     Route::get('get-user', [AuthController::class, 'usuarioInfo']);
@@ -43,13 +48,10 @@ Route::middleware('auth:api')->group(function () {
     Route::post('diario-emociones/new', [DiarioEmocionesController::class, 'store']);
     //Route::get('child/diario-emociones/{childId}', [DiarioEmocionesController::class, 'getAllDiarioEmocionesForChild']);
 
-    // -- ACTIVIDADES FAVORITAS --
-    Route::post('actividades-favoritas', [ChildActividadFavoritaController::class, 'createActividadesFavoritas']);
+
 });
 
 // -- DATOS DE USUARIO --
 //Route::resource('child/', ChildrenController::class);
 //Route::resource('usuario/', UsuariosController::class);
-//Route::resource('datos-personales/', DPersonalesController::class);
-//Route::resource('datos-clinicos/', DClinicosController::class);
-//Route::resource('datos-escolares/', DEscolaresController::class);
+
