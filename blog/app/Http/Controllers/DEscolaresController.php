@@ -8,24 +8,23 @@ use Illuminate\Support\Facades\Validator;
 
 class DEscolaresController extends Controller
 {
-    // Buscar todos los registros de datos escolares en la base de datos
+    // Buscar todos los descolares en la base de datos
     public function index()
     {
         return DEscolares::all();
     }
 
-    // Buscar un registro de datos escolares por su ID
+    // Buscar descolares por ID
     public function show($id)
     {
         return DEscolares::findOrFail($id);
     }
 
-    // Crear un nuevo registro de datos escolares en la base de datos
+    // Crear un nuevos descolares en BBDD
     public function store(Request $request)
     {
         // Validar los datos de entrada
-        $input = $request->all();
-        $validator = Validator::make($input, [
+        $validator = Validator::make($request->all(), [
             'child_id' => 'required|integer',
             'nivelAcademico' => 'required|string|max:30',
             'centroEducativo' => 'required|string|max:50',
@@ -33,20 +32,19 @@ class DEscolaresController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json($validator->errors(), 422);
+            return response()->json($validator->errors(), 400);
         }
 
-        $escolares = DEscolares::create($request->all());
+        $descolares = DEscolares::create($request->all());
 
-        return response()->json($escolares, 200);
+        return response()->json($descolares, 200);
     }
 
-    // Actualizar un registro de datos escolares en la base de datos por su ID
+    // Actualizar descolares por ID
     public function update(Request $request, $id)
     {
         // Validar los datos de entrada
-        $input = $request->all();
-        $validator = Validator::make($input, [
+        $validator = Validator::make($request->all(), [
             'child_id' => 'required|integer',
             'nivelAcademico' => 'required|string|max:30',
             'centroEducativo' => 'required|string|max:50',
@@ -54,21 +52,31 @@ class DEscolaresController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json($validator->errors(), 422);
+            return response()->json($validator->errors(), 400);
         }
 
-        $escolares = DEscolares::findOrFail($id);
-        $escolares->update($request->all());
+        $descolares = DEscolares::findOrFail($id);
 
-        return response()->json($escolares, 200); // Código 200: OK
+        if (!$descolares) {
+            return response()->json(['message' => 'Datos no encontrados'], 404);
+        }
+
+        $descolares->update($request->all());
+
+        return response()->json($descolares, 200);
     }
 
-    // Eliminar un registro de datos escolares de la base de datos por su ID
+    // Eliminar descolares por ID
     public function destroy($id)
     {
-        $escolares = DEscolares::findOrFail($id);
-        $escolares->delete();
+        $descolares = DEscolares::findOrFail($id);
 
-        return response()->json(null, 204); // Código 204: No Content
+        if (!$descolares) {
+            return response()->json(['message' => 'Datos no encontrados'], 404);
+        }
+
+        $descolares->delete();
+
+        return response()->json(null, 204);
     }
 }

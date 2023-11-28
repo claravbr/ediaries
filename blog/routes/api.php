@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChildActividadFavoritaController;
-use App\Http\Controllers\ChildrenController;
 use App\Http\Controllers\DClinicosController;
 use App\Http\Controllers\DEscolaresController;
 use App\Http\Controllers\DiarioEmocionesController;
@@ -33,10 +32,6 @@ Route::post('actividades-favoritas/', [ChildActividadFavoritaController::class, 
 Route::middleware('auth:api')->group(function () {
     Route::get('get-user', [AuthController::class, 'usuarioInfo']);
 
-    // -- DATOS DE USO DE APLICACIÓN --
-    Route::resource('child/diario-emociones/', DiarioEmocionesController::class);
-    // Route::resource('tarea-diaria/', TareaDiariaController::class);
-
     // -- TAREAS DIARIAS --
     Route::post('tarea-diaria/new', [TareaDiariaController::class, 'store']);
     Route::get('tarea-diaria/get-tareas/{childId}', [TareaDiariaController::class, 'getTareasByChildId']);
@@ -46,12 +41,6 @@ Route::middleware('auth:api')->group(function () {
 
     // -- DIARIO EMOCIONES --
     Route::post('diario-emociones/new', [DiarioEmocionesController::class, 'store']);
-    //Route::get('child/diario-emociones/{childId}', [DiarioEmocionesController::class, 'getAllDiarioEmocionesForChild']);
 
 
 });
-
-// -- DATOS DE USUARIO --
-//Route::resource('child/', ChildrenController::class);
-//Route::resource('usuario/', UsuariosController::class);
-

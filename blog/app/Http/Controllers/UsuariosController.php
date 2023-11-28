@@ -61,28 +61,7 @@ class UsuariosController extends Controller
     {
         $usuario->delete();
 
-        return response()->json(null, 204); // 204: No content
-    }
-
-    public function update(Request $request, Usuario $usuario)
-    {
-        // Hacer la validación de que los datos que vienen en la petición son válidos.
-        $input = $request->all();
-        $validator = Validator::make($input, [
-            'nombre' => 'required|max:20',
-            'apellidos' => 'required|max:20',
-            'email' => 'required|unique|max:50',
-            'password' => 'required|max:50',
-            'fotoPath' => 'nullable',
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json($validator->errors(), 400);
-        }
-
-        $usuario->update($request->all());
-
-        return response()->json($usuario, 200); //Código 200: OK
+        return response()->json(null, 204);
     }
 
     // Comprueba si el email ya está en uso
@@ -94,10 +73,10 @@ class UsuariosController extends Controller
         $usuario = Usuario::where('email', $email)->first();
 
         if ($usuario) {
-            // Si se encuentra un usuario con ese email, devuelve true
+            // Si encuentra un usuario con el email, true
             return response()->json(true);
         } else {
-            // Si no se encuentra un usuario con ese email, devuelve false
+            // Si no, false
             return response()->json(false);
         }
     }

@@ -17,9 +17,7 @@ class ActividadFavoritaController extends Controller
     // Buscar una actividad favorita por su ID
     public function show($id)
     {
-        $actividadFavorita = ActividadFavorita::findOrFail($id);
-
-        return $actividadFavorita;
+        return ActividadFavorita::findOrFail($id);
     }
 
     // Crear una nueva actividad favorita en la base de datos
@@ -36,7 +34,7 @@ class ActividadFavoritaController extends Controller
 
         $actividadFavorita = ActividadFavorita::create($request->all());
 
-        return response()->json($actividadFavorita, 201); // Código 201: Created
+        return response()->json($actividadFavorita, 200);
     }
 
     // Actualizar una actividad favorita en la base de datos
@@ -59,7 +57,7 @@ class ActividadFavoritaController extends Controller
 
         $actividadFavorita->update($request->all());
 
-        return response()->json($actividadFavorita, 200); // Código 200: OK
+        return response()->json($actividadFavorita, 200);
     }
 
     // Eliminar una actividad favorita de la base de datos
@@ -73,6 +71,6 @@ class ActividadFavoritaController extends Controller
 
         $actividadFavorita->delete();
 
-        return response()->json(['message' => 'Actividad favorita eliminada'], 204); // Código 204: No Content
+        return response()->json(null, 204);
     }
 }

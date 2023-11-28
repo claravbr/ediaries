@@ -9,22 +9,23 @@ use Illuminate\Support\Facades\Validator;
 
 class DPersonalesController extends Controller
 {
-    // Buscar todos los registros de dpersonales en la base de datos
+    // Buscar todos los dpersonales en la base de datos
     public function index()
     {
         return DPersonales::all();
     }
 
-    // Buscar un registro de dpersonales por su ID
+    // Buscar dpersonales por ID
     public function show($id)
     {
         return DPersonales::findOrFail($id);
     }
 
-    // Crear un nuevo registro de dpersonales en la base de datos
+    // Crear un nuevos dpersonales
     public function store(Request $request)
     {
-        $request['fnacimiento'] = Carbon::createFromFormat('d/m/Y', $request->fnacimiento); // Convierte la fecha a un objeto Carbon.
+        // Convierte la fecha a un objeto Carbon.
+        $request['fnacimiento'] = Carbon::createFromFormat('d/m/Y', $request->fnacimiento);
         // Validar los datos de entrada
         $validator = Validator::make($request->all(), [
             'child_id' => 'required|integer|exists:child,id',
@@ -51,16 +52,16 @@ class DPersonalesController extends Controller
 
         // Verifica si se encontró el registro
         if (!$dpersonales) {
-            return response()->json(['message' => 'Registro no encontrado'], 404);
+            return response()->json(['message' => 'Datos no encontrados'], 404);
         }
 
         // Elimina el registro
         $dpersonales->delete();
 
-        return response()->json(['message' => 'Registro eliminado'], 204);
+        return response()->json(null, 204);
     }
 
-    // Actualizar un registro de dpersonales en la base de datos
+    // Actualizar dpersonales por ID
     public function update(Request $request, $id)
     {
         // Validar los datos de entrada
@@ -75,14 +76,14 @@ class DPersonalesController extends Controller
             return response()->json($validator->errors(), 400);
         }
 
-        // Buscar el registro de dpersonales por su ID
-        $dpersonales = DPersonales::find($id);
+        // Buscar dpersonales por ID
+        $dpersonales = DPersonales::findOrFail($id);
 
         if (!$dpersonales) {
-            return response()->json(['message' => 'Registro no encontrado'], 404);
+            return response()->json(['message' => 'Datos no encontrados'], 404);
         }
 
-        // Actualizar los datos del registro de dpersonales
+        // Actualizar los datos
         $dpersonales->update($request->all());
 
         return response()->json($dpersonales, 200); // Código 200: OK

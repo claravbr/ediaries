@@ -119,6 +119,6 @@ class TareaDiariaController extends Controller
         // Actualizar los datos de la tarea diaria
         $tareaDiaria->update($request->all());
 
-        return response()->json($tareaDiaria, 200); // Código 200: OK
+        return response()->json($tareaDiaria, 200);
     }
 }

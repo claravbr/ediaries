@@ -23,24 +23,10 @@ class DiarioEmocionesController extends Controller
         return DiarioEmociones::findOrFail($id);
     }
 
-    // Buscar todos los objetos en BBDD de un Child id dado
-    public function getAllDiarioEmocionesForChild($childId)
-    {
-        $child = Child::find($childId);
-
-        if (!$child) {
-            return response()->json(['message' => 'Child not found'], 404);
-        }
-
-        $diarioEmociones = $child->diarioEmociones;
-
-        return response()->json($diarioEmociones, 200);
-    }
-
-    // Introducir objeto en la BBDD
+    // Introducir entrada del diario en la BBDD
     public function store(Request $request)
     {
-        // Hacer la validación
+        // Hacer la validación de los datos de entrada
         $request['fecha'] = Carbon::now();
         $validator = Validator::make($request->all(), [
             'child_id' => 'required|integer',
@@ -62,32 +48,18 @@ class DiarioEmocionesController extends Controller
         return response()->json($diarioEmocion, 200);
     }
 
-    // Borrar objeto de la BBDD
-    public function destroy(DiarioEmociones $diarioEmocion)
+    // Borrar objeto de la BBDD por ID
+    public function destroy($id)
     {
-        $diarioEmocion->delete();
+        $diarioEmocion = DiarioEmociones::findOrFail($id);
 
-        return response()->json(null, 204); // 204: No content
-    }
-
-    // Actualizar objeto de la BBDD
-    public function update(Request $request, DiarioEmociones $diarioEmocion)
-    {
-        // Hacer la validación de que los datos que vienen en la petición son válidos.
-        $input = $request->all();
-        $validator = Validator::make($input, [
-            'child_id' => 'required|integer',
-            'fecha' => 'required|date',
-            'emocion' => 'required|string|max:20',
-            'descripcion' => 'required|string',
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json($validator->errors(), 400);
+        if (!$diarioEmocion) {
+            return response()->json(['message' => 'Entrada no encontrada'], 404);
         }
 
-        $diarioEmocion->update($request->all());
+        $diarioEmocion->delete();
 
-        return response()->json($diarioEmocion, 200); // Código 200: OK
+        return response()->json(null, 204);
     }
+
 }
