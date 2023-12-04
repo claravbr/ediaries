@@ -24,7 +24,7 @@ class UsuariosController extends Controller
     // Introducir objeto en la BBDD
     public function register(Request $request)
     {
-        // Hacer la validación
+        // Validacion de los datos de entrada
         $input = $request->all();
         $validator = Validator::make($input, [
             'nombre' => 'required|max:20',
@@ -62,22 +62,5 @@ class UsuariosController extends Controller
         $usuario->delete();
 
         return response()->json(null, 204);
-    }
-
-    // Comprueba si el email ya está en uso
-    public function checkEmail(Request $request)
-    {
-        $email = $request->input('email');
-
-        // Buscar un usuario con el email proporcionado
-        $usuario = Usuario::where('email', $email)->first();
-
-        if ($usuario) {
-            // Si encuentra un usuario con el email, true
-            return response()->json(true);
-        } else {
-            // Si no, false
-            return response()->json(false);
-        }
     }
 }

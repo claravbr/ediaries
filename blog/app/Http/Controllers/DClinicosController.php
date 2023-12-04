@@ -81,7 +81,7 @@ class DClinicosController extends Controller
     // Eliminar dclinicos por ID
     public function destroy($id)
     {
-        // Busca el registro de dclinicos por su ID
+        // Busca el registro de dclinicos por ID
         $dclinicos = DClinicos::findOrFail($id);
 
         // Verifica si se encontró el registro

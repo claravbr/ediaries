@@ -26,7 +26,7 @@ class DiarioEmocionesController extends Controller
     // Introducir entrada del diario en la BBDD
     public function store(Request $request)
     {
-        // Hacer la validación de los datos de entrada
+        // Validar los datos de entrada
         $request['fecha'] = Carbon::now();
         $validator = Validator::make($request->all(), [
             'child_id' => 'required|integer',

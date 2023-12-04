@@ -44,10 +44,10 @@ class DPersonalesController extends Controller
         return response()->json($dpersonales, 200);
     }
 
-    // Eliminar un registro de dpersonales de la base de datos
+    // Eliminar dpersonales por ID
     public function destroy($id)
     {
-        // Busca el registro de dpersonales por su ID
+        // Busca por ID
         $dpersonales = DPersonales::find($id);
 
         // Verifica si se encontró el registro

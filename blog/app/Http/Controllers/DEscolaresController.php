@@ -20,7 +20,7 @@ class DEscolaresController extends Controller
         return DEscolares::findOrFail($id);
     }
 
-    // Crear un nuevos descolares en BBDD
+    // Crear nuevos descolares en BBDD
     public function store(Request $request)
     {
         // Validar los datos de entrada
